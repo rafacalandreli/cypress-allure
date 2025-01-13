@@ -6,9 +6,11 @@
     "test": "tests"
   },
   "scripts": {
-    "e2e": "cypress run --env allure=true",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
     "report:allure": "allure generate ./allure-results -o ./allure-report",
-    "test:allure": "npm run e2e && npm run report:allure"
+    "test:allure": "npm run cypress:run && npm run report:allure",
+    "allure:open": "allure open ./allure-report"
   },
   "repository": {
     "type": "git",
