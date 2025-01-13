@@ -1,0 +1,29 @@
+{
+  "name": "cypress-allure-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "e2e": "cypress run --env allure=true",
+    "report:allure": "allure generate ./allure-results -o ./allure-report",
+    "test:allure": "npm run e2e && npm run report:allure"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafacalandreli/cypress-allure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafacalandreli/cypress-allure/issues"
+  },
+  "homepage": "https://github.com/rafacalandreli/cypress-allure#readme",
+  "description": "",
+  "devDependencies": {
+    "allure-cypress": "^3.0.8",
+    "cypress": "^13.17.0"
+  }
+}
